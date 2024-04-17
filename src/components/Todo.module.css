@@ -1,0 +1,18 @@
+.btn {
+    padding: 5px 20px;
+    border: 0;
+    margin-left: 16px;
+    background-color: #111;
+    color: #fff;
+}
+
+.textTodo {
+    font-size: 18px;
+    margin-right: 16px;
+}
+
+.todo {
+    margin-top: 32px;
+    display: flex;
+    align-items: center;
+}

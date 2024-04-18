@@ -7,11 +7,11 @@
 
 .App {
     width: 100vw;
-    margin-top: 100px;
+    margin-top: 128px;
     display: flex;
     justify-content: center;
 }
 
 .container {
-    width: 40%;
+    width: 600px;
 }

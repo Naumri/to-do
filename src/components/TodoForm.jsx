@@ -3,6 +3,7 @@ import styles from './TodoForm.module.css';
 
 function TodoForm ({setTodos, todos}) {
     const [input, setInput] = useState('');
+    const [id, setId] = useState(0);
 
     const handleChange = (e) => {
         const valueInput = e.target.value;
@@ -11,8 +12,10 @@ function TodoForm ({setTodos, todos}) {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        if(!input) return;
-        setTodos([...todos, {text: input, id: todos.length}]);
+        if(!input.trim()) return;
+        if(input.length > 20) return;
+        setId(prev => prev + 1);
+        setTodos([...todos, {text: input, id: id}]);
         setInput('');
     }
 

@@ -37,6 +37,11 @@
     cursor: pointer;
 }
 
+.btn:hover {
+    background-color: #12adad;
+    color: #eee;
+}
+
 .inputs_wrapper {
     width: 100%;
     margin-top: 16px;

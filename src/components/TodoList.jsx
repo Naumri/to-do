@@ -1,7 +1,7 @@
 import Todo from "./Todo";
 import styles from "./TodoList.module.css";
 
-function TodoList ({todos, deleteTask}) {
+function TodoList ({todos, deleteTask, updateTodoText}) {
     return (
         <>
         <div className={styles.todo_list}>
@@ -10,9 +10,11 @@ function TodoList ({todos, deleteTask}) {
                 <div className={styles.line}></div>
             </div>
             <ul>
-                { todos.map((todo, key) => (
-                    <Todo key={key} todo={todo} deleteTask={deleteTask} />
-                ))}
+                { todos.length > 0 ? todos.map((todo, key) => (
+                    <Todo key={key} todo={todo} deleteTask={deleteTask} updateTodoText={updateTodoText} />
+                )) : (
+                    <p>No tasks have been created yet.</p>
+                )}
             </ul>
         </div>
         </>

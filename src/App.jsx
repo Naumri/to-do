@@ -24,7 +24,7 @@ function App() {
     <section className='App'>
       <div className='container'>
         <TodoForm setTodos={setTodos} todos={todos} />
-        <TodoList deleteTask={deleteTask} todos={todos} updateTodoText={updateTodoText} />
+        <TodoList deleteTask={deleteTask} todos={todos} updateTodoText={updateTodoText} setTodos={setTodos} />
       </div>
     </section>
   )

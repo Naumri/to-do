@@ -2,20 +2,16 @@ import { useEffect, useRef, useState } from "react";
 import styles from "./Todo.module.css";
 import { MdEdit, MdDelete } from "react-icons/md";
 
-function Todo ({todo, deleteTask, updateTodoText}) {
+function Todo ({todo, deleteTask, updateTodoText, checkTodo}) {
     
-    const [check, setCheck] = useState(false);
     const [isEdit, setIsEdit] = useState(false);
-    const [task, setTask] = useState(todo.text);
 
     const inputEditRef = useRef(null);
 
-    const handleCheck = () => {
-        setCheck(!check);
-    }
-
     const editTask = (e) => {
         e.preventDefault();
+        if(!todo.text.trim()) return;
+        if(todo.text.length > 30) return;
         setIsEdit(!isEdit);
     }
 
@@ -43,8 +39,8 @@ function Todo ({todo, deleteTask, updateTodoText}) {
                 ) : (
                     <>
                     <div className={styles.title_todo}>
-                        <input className={styles.checkbox} type="checkbox" id={todo.id} onChange={handleCheck} />
-                        <span className={`${styles.textTodo} ${check && styles.checked}`}>{todo.text}</span> 
+                        <input className={styles.checkbox} type="checkbox" id={todo.id} checked={todo.checked} onChange={() => {checkTodo(todo.id)}} />
+                        <span className={`${styles.textTodo} ${todo.checked && styles.checked}`}>{todo.text}</span> 
                     </div>
                     <div className={styles.icon_wrapper}>
                         <MdEdit onClick={editTask} className={`${styles.icon} ${styles.edit}`} />

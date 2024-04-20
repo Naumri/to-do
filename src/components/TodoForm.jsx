@@ -15,7 +15,7 @@ function TodoForm ({setTodos, todos}) {
         if(!input.trim()) return;
         if(input.length > 30) return;
         setId(prev => prev + 1);
-        setTodos([...todos, {text: input, id: id}]);
+        setTodos([...todos, {text: input, id: id, checked: false}]);
         setInput('');
     }
 

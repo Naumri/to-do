@@ -1,3 +1,27 @@
+:root {
+    --black: #000;
+    --white-two: #fff;
+    --white: #fff;
+    --white-hover: #eee;
+    --gray-light: #f1f1f1;
+    --cyan: #21D1D1;
+    --cyan-hover: #12adad;
+    --cyan-light: #DDF3F3;
+}
+
+[darkMode="true"] {
+    --black: #fff;
+    --white: #000;
+    --white-hover: #000;
+    --white-two: #1a1c1c;
+    --cyan-light: #1d3f3f;
+    --gray-light: #303030;
+}
+
+body {
+    background-color: var(--white-two);
+}
+
 * {
     margin: 0;
     padding: 0;

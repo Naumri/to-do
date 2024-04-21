@@ -1,17 +1,32 @@
 .title {
     font-weight: 500;
     font-size: 48px;
+    color: var(--black);
 }
 
 .project_name {
     font-size: 18px;
+    color: var(--black);
 }
 
 .line {
     width: 40px;
     height: 1px;
-    background-color: #f1f1f1;
+    background-color: var(--gray-light);
     margin: 8px 0;
+}
+
+.hat {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hat svg {
+    cursor: pointer;
+    width: 32px;
+    height: 32px;
+    color: var(--black);
 }
 
 .task {
@@ -19,7 +34,9 @@
     height: 40px;
     padding-left: 15px;
     border: 0;
-    border-left: 4px solid #21D1D1;
+    color: var(--black);
+    border-left: 4px solid var(--cyan);
+    background-color: transparent;
     font-size: 21px;
 }
 
@@ -30,16 +47,16 @@
 .btn {
     padding: 10px 30px;
     border: 0;
-    background-color: #21D1D1;
-    color: #fff;
+    background-color: var(--cyan);
+    color: var(--white);
     font-weight: 600;
     font-size: 18px;
     cursor: pointer;
 }
 
 .btn:hover {
-    background-color: #12adad;
-    color: #eee;
+    background-color: var(--cyan-hover);
+    color: var(--white-hover);
 }
 
 .inputs_wrapper {

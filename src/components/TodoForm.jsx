@@ -1,5 +1,6 @@
 import { useState } from "react";
 import styles from './TodoForm.module.css';
+import DarkMode from "./DarkMode";
 
 function TodoForm ({setTodos, todos}) {
     const [input, setInput] = useState('');
@@ -22,7 +23,10 @@ function TodoForm ({setTodos, todos}) {
     return (
         <form className={styles.formTodo} onSubmit={handleSubmit}>
             <div className={styles.header}>
-                <p className={styles.project_name}>TO-DO LIST</p>
+                <div className={styles.hat}>
+                    <p className={styles.project_name}>TO-DO LIST</p>
+                    <DarkMode />
+                </div>
                 <div className={styles.line}></div>
                 <h1 className={styles.title}>What are today's tasks?</h1>
             </div>

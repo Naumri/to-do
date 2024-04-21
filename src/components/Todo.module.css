@@ -1,19 +1,12 @@
-.btn {
-    padding: 5px 20px;
-    border: 0;
-    margin-left: 16px;
-    background-color: #111;
-    color: #fff;
-}
-
 .textTodo {
     font-size: 20px;
     margin-left: 16px;
     position: relative;
+    color: var(--black);
 }
 
 .todo {
-    border: 2px solid #DDF3F3;
+    border: 2px solid var(--cyan-light);
     border-radius: 5px;
     padding: 16px;
     margin-top: 16px;
@@ -35,7 +28,7 @@
     left: 0;
     right: 0;
     transform: translateY(50%);
-    border-bottom: 2px solid #000;
+    border-bottom: 2px solid var(--black);
 }
 
 .checkbox {
@@ -43,15 +36,15 @@
     width: 20px;
     height: 20px;
     cursor: pointer;
-    border: 3px solid #21D1D1;
+    border: 3px solid var(--cyan);
 }
 
 .checkbox:hover {
-    background-color: #DDF3F3;
+    background-color: var(--cyan-light);
 }
 
 .checkbox:checked {
-    background-color: #21D1D1;
+    background-color: var(--cyan);
 }
 
 .line:last-child {
@@ -69,6 +62,7 @@
     margin-left: 16px;
     cursor: pointer;
     transition: 0.2s;
+    color: var(--black);
 }
 
 .delete:hover {
@@ -76,7 +70,7 @@
 }
 
 .edit:hover {
-    color: #21D1D1;
+    color: var(--cyan);
 }
 
 .iconEdit {
@@ -84,13 +78,13 @@
     height: 32px;
     cursor: pointer;
     transition: 0.2s;
-    color: #fff;
+    color: var(--white);
 }
 
 .editText {
     border: 0;
     background-color: transparent;
-    color: white;
+    color: var(--white);
     font-size: 20px;
     margin-left: 16px;
 }
@@ -115,8 +109,8 @@
     padding: 10px 30px;
     border: 0;
     border-radius: 5px;
-    background-color: #fff;
-    color: #21D1D1;
+    background-color: var(--white-two);
+    color: var(--cyan);
     font-weight: 600;
     font-size: 18px;
     cursor: pointer;
@@ -124,6 +118,6 @@
 }
 
 .btn:hover {
-    background-color: #eee;
+    background-color: var(--white);
     color: #12adad;
 }
